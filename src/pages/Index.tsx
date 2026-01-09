@@ -7,12 +7,12 @@ const Index = () => {
   const [bootLines, setBootLines] = useState<string[]>([]);
   
   const bootSequence = [
-    '> Initializing system...',
-    '> Loading kernel modules...',
-    '> Bypassing firewall...',
-    '> Establishing secure connection...',
-    '> Access granted.',
-    '> Welcome, Hacker.',
+    '> Mencari system janda...',
+    '> Seystem janda ditemukan...',
+    '> Bypass system janda...',
+    '> Membobol akses janda...',
+    '> Akses terbuka.',
+    '> Selamat anda mendapatkan, Janda.',
   ];
 
   useEffect(() => {
