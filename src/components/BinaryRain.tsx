@@ -6,31 +6,34 @@ interface BinaryColumn {
   duration: number;
   delay: number;
   content: string;
+  fontSize: number;
 }
 
 const BinaryRain = () => {
   const [columns, setColumns] = useState<BinaryColumn[]>([]);
 
   useEffect(() => {
-    const generateBinaryString = () => {
+    const generateMatrixString = () => {
+      const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       let str = '';
-      for (let i = 0; i < 40; i++) {
-        str += Math.random() > 0.5 ? '1' : '0';
+      for (let i = 0; i < 50; i++) {
+        str += chars[Math.floor(Math.random() * chars.length)];
         str += '\n';
       }
       return str;
     };
 
     const cols: BinaryColumn[] = [];
-    const numColumns = 60;
+    const numColumns = 80;
 
     for (let i = 0; i < numColumns; i++) {
       cols.push({
         id: i,
         left: (i / numColumns) * 100,
-        duration: 4 + Math.random() * 8,
-        delay: Math.random() * 3,
-        content: generateBinaryString(),
+        duration: 3 + Math.random() * 7,
+        delay: Math.random() * 5,
+        content: generateMatrixString(),
+        fontSize: 12 + Math.random() * 6,
       });
     }
 
@@ -47,6 +50,8 @@ const BinaryRain = () => {
             left: `${col.left}%`,
             animationDuration: `${col.duration}s`,
             animationDelay: `${col.delay}s`,
+            fontSize: `${col.fontSize}px`,
+            opacity: 0.3 + Math.random() * 0.5,
           }}
         >
           {col.content}
