@@ -75,13 +75,13 @@ const Index = () => {
           
           {/* Glowing Name with Glitch */}
           <h1 className="glow-text text-4xl md:text-6xl lg:text-7xl">
-            I'am Idin Iskandar
+            Hengker Suka Janda
           </h1>
           
           {/* Tagline */}
           <div className="terminal-text text-xl md:text-2xl lg:text-3xl tracking-widest">
             <span className="opacity-70">&gt; </span>
-            Gak ngefly Gak Asik
+            Gak Janda Gak Asik 😎
             <span className="inline-block w-3 h-6 bg-primary ml-2 animate-pulse" />
           </div>
           
